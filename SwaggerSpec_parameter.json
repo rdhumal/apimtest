@@ -1,0 +1,66 @@
+{
+  "info": {
+    "description":"test",
+    "version": "1.0", 
+    "title": "TestAPI4"
+  }, 
+
+   "tags": [
+    {
+      "name": "pet"
+    },
+    {
+      "name": "store"
+    },
+    {
+      "name": "user"
+    }
+  ],
+
+
+  "paths": {
+    "/getData": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+
+        "parameters": [
+          {
+            "name": "param1",
+            "in": "query",
+            "type": "string",
+            "format": "stringValue"
+          },
+          {
+            "name": "param2",
+            "in": "header",
+            "type": "integer",
+            "format": "int64",
+            "default": 3
+          },
+          {
+            "name": "param3",
+            "in": "header",
+            "type": "number",
+            "format": "float",
+            "default": 3.5
+          },
+          {
+            "name": "param4",
+            "in": "header",
+            "type": "array",
+            "default": [
+              "test"
+            ]
+          }             
+        
+        ]
+      }
+    }
+  },
+ 
+  "swagger": "2.0"
+}
